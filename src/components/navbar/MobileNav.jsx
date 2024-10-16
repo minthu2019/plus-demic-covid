@@ -9,6 +9,7 @@ const MobileNav = () => {
         <Menu size={30} color="red"/>
       </div>
     <Button variant='default' className="hidden md:flex">Get in Touch</Button>
+    
     </div>
   );
 };
