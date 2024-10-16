@@ -8,8 +8,6 @@ const MobileNav = () => {
       <div className=" block md:hidden">
         <Menu size={30} color="red"/>
       </div>
-    <Button variant='default' className="hidden md:flex">Get in Touch</Button>
-    
     </div>
   );
 };
