@@ -15,19 +15,19 @@ const mobileNavs = [
     id: 2,
     name: "Custome Stories",
     url: "custome",
-    offset: 0,
+    offset:-60,
   },
   {
     id: 3,
     name: "About",
     url: "about",
-    offset: -180,
+    offset: -40,
   },
   {
     id: 4,
     name: "Blog",
     url: "blog",
-    offset: -180,
+    offset: -30,
   },
 ];
 
