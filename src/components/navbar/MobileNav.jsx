@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "lucide-react";
 import logo from "../../assets/logo.png";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Link } from "react-scroll";
 
 const mobileNavs = [
@@ -15,19 +15,19 @@ const mobileNavs = [
     id: 2,
     name: "Custome Stories",
     url: "custome",
-    offset:-60,
+    offset: 0,
   },
   {
     id: 3,
     name: "About",
     url: "about",
-    offset: -40,
+    offset: -180,
   },
   {
     id: 4,
     name: "Blog",
     url: "blog",
-    offset: -30,
+    offset: -180,
   },
 ];
 
@@ -45,10 +45,19 @@ const MobileNav = () => {
           <ul className=" flex items-center justify-center flex-col gap-10 ">
             {mobileNavs.map((mobileNav) => {
               return (
-                <li key={mobileNav.id} className="hover:text-primary cursor-pointer">
-                  <Link to={mobileNav.url} smooth={true} offset={mobileNav.offset}>
-                    {mobileNav.name}
-                  </Link>
+                <li
+                  key={mobileNav.id}
+                  className="hover:text-primary cursor-pointer"
+                >
+                  <SheetClose asChild>
+                    <Link
+                      to={mobileNav.url}
+                      smooth={true}
+                      offset={mobileNav.offset}
+                    >
+                      {mobileNav.name}
+                    </Link>
+                  </SheetClose>
                 </li>
               );
             })}
